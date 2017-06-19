@@ -29,16 +29,14 @@ class ext extends base
 	*/
 	public function is_enableable()
 	{
-		$config = $this->container->get('config');
+		$is_enableable = phpbb_version_compare(PHPBB_VERSION, '3.2.0', '>=');
 
-		if (!phpbb_version_compare($config['version'], '3.2.0', '>='))
+		if (!$is_enableable)
 		{
 			$this->container->get('language')->add_lang('ext_sitelogo', 'david63/sitelogo');
 			trigger_error($this->container->get('language')->lang('VERSION_32') . adm_back_link(append_sid('index.' . $this->container->getParameter('core.php_ext'), 'i=acp_extensions&amp;mode=main')), E_USER_WARNING);
 		}
-		else
-		{
-			return true;
-		}
+
+		return $is_enableable;
 	}
 }
