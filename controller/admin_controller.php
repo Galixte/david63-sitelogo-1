@@ -10,14 +10,14 @@
 namespace david63\sitelogo\controller;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use phpbb\config\config;
-use phpbb\config\db_text;
-use phpbb\request\request;
-use phpbb\template\template;
-use phpbb\user;
-use phpbb\log\log;
-use phpbb\language\language;
-use david63\sitelogo\ext;
+use \phpbb\config\config;
+use \phpbb\config\db_text;
+use \phpbb\request\request;
+use \phpbb\template\template;
+use \phpbb\user;
+use \phpbb\log\log;
+use \phpbb\language\language;
+use \david63\sitelogo\ext;
 
 /**
 * Admin controller
@@ -42,7 +42,7 @@ class admin_controller implements admin_interface
 	/** @var \phpbb\log\log */
 	protected $log;
 
-	/** @var phpbb\language\language */
+	/** @var \phpbb\language\language */
 	protected $language;
 
 	/** @var string Custom form action */
@@ -85,7 +85,7 @@ class admin_controller implements admin_interface
 		$this->language->add_lang('acp_sitelogo', 'david63/sitelogo');
 
 		// Create a form key for preventing CSRF attacks
-		$form_key			= 'sitelogo';
+		$form_key = 'sitelogo';
 		add_form_key($form_key);
 
 		// Is the form being submitted

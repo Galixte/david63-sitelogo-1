@@ -13,11 +13,11 @@ namespace david63\sitelogo\event;
 * @ignore
 */
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use phpbb\config\config;
-use phpbb\config\db_text;
-use phpbb\template\template;
-use phpbb\user;
-use david63\sitelogo\ext;
+use \phpbb\config\config;
+use \phpbb\config\db_text;
+use \phpbb\template\template;
+use \phpbb\user;
+use \david63\sitelogo\ext;
 
 /**
 * Event listener
