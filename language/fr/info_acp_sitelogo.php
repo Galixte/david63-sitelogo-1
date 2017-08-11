@@ -36,6 +36,9 @@ if (empty($lang) || !is_array($lang))
 //
 // Some characters you may want to copy&paste:
 // ’ « » “ ” …
+//
+
+$lang = array_merge($lang, array(
 	'SITE_LOGO'			=> 'Logo du site personnalisé',
 	'SITE_LOGO_LOG'		=> '<strong>Les options du logo du forum/site personnalisé ont été mises à jour</strong>',
 	'SITE_LOGO_MANAGE'	=> 'Gérer le logo du forum/site',
